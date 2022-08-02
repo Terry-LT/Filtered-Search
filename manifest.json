@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Filtered Search",
+    "version": "1.0",
+    "description": "This tool can be helpful for people who procrastinate a lot  or people who have addictions such as social media, porn …etc ",
+    "permissions": ["storage", "tabs"],
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://www.google.com/search*","https://www.youtube.com/*"],
+          "js": ["js/contentScript.js"]
+        }
+    ],
+    "options_page": "options.html"
+}
